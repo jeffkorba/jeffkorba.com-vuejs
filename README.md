@@ -1,4 +1,4 @@
-# jeffkorba
+# jeffkorba.com-vuejs
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -33,4 +33,3 @@ npm run build
 ```sh
 npm run lint
 ```
-# jeffkorba.com-vuejs
