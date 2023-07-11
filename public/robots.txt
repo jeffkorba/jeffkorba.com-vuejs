@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://jeffkorba.com/sitemap.xml
