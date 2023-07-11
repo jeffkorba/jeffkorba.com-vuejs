@@ -11,8 +11,8 @@
 
 		<div class="summary mb-4">
 			<h3>Summary</h3>
-			<p>I have over 20 years of experience building web applications. My evelopment background includes both front-end and back-end architecture.</p>
-			<p>I've both led and mentored teams on topics such as data and system modeling, design patterns, requirements gathering as well as modular development techniques.</p>
+			<p>My development experience includes over 20 years of building web applications in both front-end and back-end environments.</p>
+			<p>I've led and mentored teams on topics such as data modeling, system architecture, design patterns, and requirements gathering.</p>
 			<p>My current focuses are microservice architecture and AI-driven development.</p>
 		</div>
 
@@ -30,6 +30,7 @@
 			<p><strong>Back-End</strong> | <small>PHP, Laravel, WordPress, CodeIgniter, Composer</small></p>
 			<p><strong>Databases</strong> | <small>MySQL, MariaDB, PostgreSQL, SQL Server, MongoDB</small></p>
 			<p><strong>Virtualization</strong> | <small>Docker, Vagrant</small></p>
+			<p><strong>Cloud Providers</strong> | <small>AWS, Azure, DigitalOcean</small></p>
 		</div>
 
 	</article>
