@@ -26,6 +26,7 @@ export default {
 		setTabActive(activeTab) {
 		
 			this.activeTab = activeTab;
+			this.isMenuActive = false;
 		},
 
 		toggleMenu () {
@@ -93,11 +94,9 @@ export default {
 
 				<ul>
 
-					<li><a href="/">Home</a></li>
-
-					<li><a href="/about">About</a></li>
-
-					<li><a href="/contact">Contact</a></li>
+					<li><RouterLink to="/" v-on:click="setTabActive('home')" v-bind:class="{active: activeTab == 'home'}">Home</RouterLink></li>
+					<li><RouterLink to="/about" v-on:click="setTabActive('about')" v-bind:class="{active: activeTab == 'about'}">About</RouterLink></li>
+					<li><RouterLink to="/contact" v-on:click="setTabActive('contact')" v-bind:class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
 
 				</ul>
 
