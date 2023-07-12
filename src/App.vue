@@ -37,11 +37,11 @@ export default {
 
 					<div class="col-12 col-lg-7 d-flex">
 
-						<section>
-							
+						<article>
+						
 							<RouterView />
-
-						</section>
+						
+						</article>
 
 					</div>
 
@@ -120,6 +120,11 @@ main {
 		border-radius: 4px;
 		object-fit: cover;
 		min-height: 100%;
+	}
+
+	article {
+
+		width: 100%;
 	}
 }
 </style>

@@ -21,87 +21,70 @@ export default {
 
 <template>
 
-	<article>
+	<h2>About Me</h2>
 
-		<h2>About Me</h2>
+	<hr />
 
-		<hr />
+	<nav class="nav nav-pills flex-column flex-sm-row mb-4">
 
-		<nav class="mb-4">
-			<ul>
-				<li>
-					<a v-on:click="setTabActive('summary')" v-bind:class="{active: activeTab == 'summary'}">Summary</a>
-				</li>
-				<li>
-					<a v-on:click="setTabActive('education')" v-bind:class="{active: activeTab == 'education'}">Education</a>
-				</li>
-				<li>
-					<a v-on:click="setTabActive('technologies')" v-bind:class="{active: activeTab == 'technologies'}">Technologies</a>
-				</li>
-			</ul>
-		</nav>
+		<a class="flex-sm-fill text-sm-center nav-link" v-on:click="setTabActive('summary')" v-bind:class="{active: activeTab == 'summary'}">Summary</a>
+		<a class="flex-sm-fill text-sm-center nav-link" v-on:click="setTabActive('education')" v-bind:class="{active: activeTab == 'education'}">Education</a>
+		<a class="flex-sm-fill text-sm-center nav-link" v-on:click="setTabActive('technologies')" v-bind:class="{active: activeTab == 'technologies'}">Technologies</a>
+	
+	</nav>
 
-		<div class="summary" v-show="activeTab == 'summary'">
-			<p>My development experience includes over 20 years of building web applications in both front-end and back-end environments.</p>
-			<p>I've led and mentored teams on topics such as data modeling, system architecture, design patterns, and requirements gathering.</p>
-			<p>My current focuses are microservice architecture and AI-driven development.</p>
-		</div>
+	<section class="summary" v-show="activeTab == 'summary'">
 
-		<div class="education" v-show="activeTab == 'education'">
-			<p><strong>University of Illinois</strong> | <small>Chicago, IL</small><br />
-				<small>BS, Information and Decision Sciences</small>
-			</p>
-			<p><strong>University of Illinois</strong> | <small>Chicago, IL</small><br />
-				<small>MS, Management Information Systems</small>
-			</p>
-		</div>
+		<p>My development experience includes over 20 years of building web applications in both front-end and back-end environments.</p>
+		<p>I've led and mentored teams on topics such as data modeling, system architecture, design patterns, and requirements gathering.</p>
+		<p>My current focuses are microservice architecture and AI-driven development.</p>
 
-		<div class="technologies" v-show="activeTab == 'technologies'">
-			<p><strong>Front-End</strong> | <small>JavaScript, Node.js, Express, Vue.js, React, Webpack, Vite, Gulp, Bootstrap</small></p>
-			<p><strong>Back-End</strong> | <small>PHP, Laravel, WordPress, CodeIgniter, Composer</small></p>
-			<p><strong>Databases</strong> | <small>MySQL, MariaDB, PostgreSQL, SQL Server, MongoDB</small></p>
-			<p><strong>Virtualization</strong> | <small>Docker, Vagrant</small></p>
-			<p><strong>Cloud Providers</strong> | <small>AWS, Azure, DigitalOcean</small></p>
-		</div>
+	</section>
 
-	</article>
+	<section class="education" v-show="activeTab == 'education'">
+
+		<p><strong>University of Illinois</strong> | Chicago, IL<br />
+		BS, Information and Decision Sciences</p>
+
+		<p><strong>University of Illinois</strong> | Chicago, IL<br />
+		MS, Management Information Systems</p>
+
+	</section>
+
+	<section class="technologies" v-show="activeTab == 'technologies'">
+
+		<p><strong>Front-End</strong><br />
+		JavaScript, Node.js, Express, Vue.js, React, Webpack, Vite, Gulp, Bootstrap</p>
+	
+	
+		<p><strong>Back-End</strong><br />
+		PHP, Laravel, WordPress, CodeIgniter, Composer</p>
+	
+	
+		<p><strong>Databases</strong><br />
+		MySQL, MariaDB, PostgreSQL, SQL Server, MongoDB</p>
+	
+	
+		<p><strong>Virtualization</strong><br />
+		Docker, Vagrant</p>
+	
+	
+		<p><strong>Cloud Providers</strong><br />
+		AWS, Azure, DigitalOcean</p>
+
+	</section>
 
 </template>
 
 <style lang="scss" scoped>
-nav {
+.nav-link {
 
-	ul {
+	color: #fff;
+	cursor: pointer;
 
-		display: inline-flex;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		flex-wrap: wrap;
-
-		li {
-
-			&:not(:last-of-type) {
-			
-				margin-right: .25rem;
-			}
-	
-			a {
-			
-				display: flex;
-				padding: .5rem 1rem;
-				color: #fff;
-				text-decoration: none;
-				border-radius: 4px;
-				cursor: pointer;
-
-				&:hover, &.active {
-
-					background-color: #fff;
-					color: #000;
-				}
-			}
-		}
+	&.active {
+		background-color: #fff;
+		color: #000;
 	}
 }
 </style>
