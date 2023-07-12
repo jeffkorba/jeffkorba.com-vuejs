@@ -1,11 +1,22 @@
 <script>
+import { useRoute } from 'vue-router';
+
 export default {
 
-	data() {
+	data () {
 
 		return {
 
 			activeTab: 'home'
+		}
+	},
+
+	computed: {
+
+		activeTab: () => {
+		
+			const route = useRoute();
+			return route.name;
 		}
 	},
 
