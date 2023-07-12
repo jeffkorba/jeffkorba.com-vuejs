@@ -35,7 +35,7 @@ export default {
 						
 					</div>
 
-					<div class="col-12 col-lg-7 d-flex align-items-center">
+					<div class="col-12 col-lg-7 d-flex">
 
 						<section>
 							

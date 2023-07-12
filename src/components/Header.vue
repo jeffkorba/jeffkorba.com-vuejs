@@ -1,4 +1,22 @@
-<script setup>
+<script>
+export default {
+
+	data() {
+
+		return {
+
+			activeTab: 'home'
+		}
+	},
+
+	methods: {
+
+		setTabActive(activeTab) {
+		
+			this.activeTab = activeTab;
+		}
+	}
+}
 </script>
 
 <template>
@@ -17,9 +35,9 @@
 				<div class="col-6 d-flex align-items-center justify-content-end">
 					<nav>
 						<ul>
-							<li><RouterLink to="/">Home</RouterLink></li>
-							<li><RouterLink to="/about">About</RouterLink></li>
-							<li><RouterLink to="/contact">Contact</RouterLink></li>
+							<li><RouterLink to="/" v-on:click="setTabActive('home')" v-bind:class="{active: activeTab == 'home'}">Home</RouterLink></li>
+							<li><RouterLink to="/about" v-on:click="setTabActive('about')" v-bind:class="{active: activeTab == 'about'}">About</RouterLink></li>
+							<li><RouterLink to="/contact" v-on:click="setTabActive('contact')" v-bind:class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
 						</ul>
 					</nav>
 				</div>
@@ -70,6 +88,11 @@ header {
 			padding: .5rem;
 
 			li {
+
+				&:not(:last-of-type) {
+			
+					margin-right: .25rem;
+				}
 		
 				a {
 				
@@ -79,7 +102,7 @@ header {
 					text-decoration: none;
 					border-radius: 4px;
 
-					&:hover {
+					&:hover, &.active {
 
 						background-color: #fff;
 						color: #000;
