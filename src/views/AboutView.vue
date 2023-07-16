@@ -54,10 +54,10 @@ export default {
 	<section class="technologies" v-show="activeTab == 'technologies'">
 
 		<p><strong>Languages</strong><br />
-		HTML, CSS, JavaScript, PHP</p>
+		HTML, CSS, JavaScript, PHP, SQL</p>
 	
 		<p><strong>Frameworks/Libraries</strong><br />
-		Laravel, CodeIgniter, Guzzle, Node.js, Vue.js, React, Webpack, Vite, Gulp, Express, Bootstrap</p>
+		Laravel, CodeIgniter, Guzzle, Node.js, Vue.js, React, Webpack, Vite, Gulp, Axios, Express, Bootstrap</p>
 
 		<p><strong>Web Servers</strong><br />
 		Nginx, Apache, IIS</p>
