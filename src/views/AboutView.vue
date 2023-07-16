@@ -44,32 +44,32 @@ export default {
 	<section class="education" v-show="activeTab == 'education'">
 
 		<p><strong>University of Illinois</strong> | Chicago, IL<br />
-		BS, Information and Decision Sciences</p>
+		<small>BS, Information and Decision Sciences</small></p>
 
 		<p><strong>University of Illinois</strong> | Chicago, IL<br />
-		MS, Management Information Systems</p>
+		<small>MS, Management Information Systems</small></p>
 
 	</section>
 
 	<section class="technologies" v-show="activeTab == 'technologies'">
 
 		<p><strong>Languages</strong><br />
-		HTML, CSS, JavaScript, PHP, SQL</p>
+		<small>HTML, CSS, JavaScript, PHP, SQL</small></p>
 	
 		<p><strong>Frameworks/Libraries</strong><br />
-		Laravel, CodeIgniter, Guzzle, Node.js, Vue.js, React, Webpack, Vite, Gulp, Axios, Express, Bootstrap</p>
+		<small>Laravel, CodeIgniter, Guzzle, Node.js, Vue.js, React, Webpack, Vite, Gulp, Axios, Express, Bootstrap</small></p>
 
 		<p><strong>Web Servers</strong><br />
-		Nginx, Apache, IIS</p>
+		<small>Nginx, Apache, IIS</small></p>
 	
 		<p><strong>Databases</strong><br />
-		MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB</p>
+		<small>MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB</small></p>
 	
 		<p><strong>Virtualization</strong><br />
-		Docker, Vagrant, VirtualBox</p>
+		<small>Docker, Vagrant, VirtualBox</small></p>
 	
 		<p><strong>Cloud Providers</strong><br />
-		AWS, Azure, DigitalOcean</p>
+		<small>AWS, Azure, DigitalOcean</small></p>
 
 	</section>
 
