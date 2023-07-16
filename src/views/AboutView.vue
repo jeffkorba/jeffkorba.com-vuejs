@@ -53,21 +53,20 @@ export default {
 
 	<section class="technologies" v-show="activeTab == 'technologies'">
 
-		<p><strong>Front-End</strong><br />
-		JavaScript, Node.js, Express, Vue.js, React, Webpack, Vite, Gulp, Bootstrap</p>
+		<p><strong>Languages</strong><br />
+		HTML, CSS, JavaScript, PHP</p>
 	
-	
-		<p><strong>Back-End</strong><br />
-		PHP, Laravel, WordPress, CodeIgniter, Composer</p>
-	
+		<p><strong>Frameworks/Libraries</strong><br />
+		Laravel, CodeIgniter, Guzzle, Node.js, Vue.js, React, Webpack, Vite, Gulp, Express, Bootstrap</p>
+
+		<p><strong>Web Servers</strong><br />
+		Nginx, Apache, IIS</p>
 	
 		<p><strong>Databases</strong><br />
-		MySQL, MariaDB, PostgreSQL, SQL Server, MongoDB</p>
-	
+		MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB</p>
 	
 		<p><strong>Virtualization</strong><br />
-		Docker, Vagrant</p>
-	
+		Docker, Vagrant, VirtualBox</p>
 	
 		<p><strong>Cloud Providers</strong><br />
 		AWS, Azure, DigitalOcean</p>

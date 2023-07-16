@@ -17,10 +17,6 @@
 			<a href="https://www.linkedin.com/in/jeffkorba" target="_blank">linkedin.com/in/jeffkorba</a>
 		</li>
 		<li>
-			<div class="icon"><i class="fa-solid fa-envelope"></i></div>
-			<a href="mailto: contact@korbaconsulting.com">contact@korbaconsulting.com</a>
-		</li>
-		<li>
 			<div class="icon"><i class="fa-solid fa-phone"></i></div>
 			<a href="tel:3127722642">312.772.2642</a>
 		</li>
