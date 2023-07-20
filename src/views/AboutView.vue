@@ -53,23 +53,19 @@ export default {
 
 	<section class="technologies" v-show="activeTab == 'technologies'">
 
-		<p><strong>Languages</strong><br />
-		<small>HTML, CSS, JavaScript, PHP, SQL</small></p>
+		<p><strong>HTML/CSS</strong> | <small>Sass, Bootstrap, Tailwind CSS, Skeleton</small></p>
 	
-		<p><strong>Frameworks/Libraries</strong><br />
-		<small>Laravel, CodeIgniter, Guzzle, Node.js, Vue.js, React, Webpack, Vite, Gulp, Axios, Express, Bootstrap</small></p>
+		<p><strong>JavaScript</strong> | <small>Node.js, Vue.js, React, Axios, Express, Chart.js, Gulp, Webpack, Vite</small></p>
 
-		<p><strong>Web Servers</strong><br />
-		<small>Nginx, Apache, IIS</small></p>
+		<p><strong>PHP</strong> | <small>Laravel, CodeIgniter, WordPress, Guzzle, Composer</small></p>
+
+		<p><strong>Web Servers</strong> | <small>Nginx, Apache, IIS</small></p>
 	
-		<p><strong>Databases</strong><br />
-		<small>MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB</small></p>
+		<p><strong>Databases</strong> | <small>MySQL/MariaDB, PostgreSQL, SQL Server, MongoDB</small></p>
 	
-		<p><strong>Virtualization</strong><br />
-		<small>Docker, Vagrant, VirtualBox</small></p>
+		<p><strong>Virtualization</strong> | <small>Docker, Vagrant, VirtualBox</small></p>
 	
-		<p><strong>Cloud Providers</strong><br />
-		<small>AWS, Azure, DigitalOcean</small></p>
+		<p><strong>Cloud Providers</strong> | <small>AWS, Azure, DigitalOcean</small></p>
 
 	</section>
 

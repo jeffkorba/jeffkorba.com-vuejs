@@ -10,17 +10,26 @@ const router = createRouter({
 		{
 			path: '/',
 			name: 'home',
-			component: HomeView
+			component: HomeView,
+			meta: {
+				title: import.meta.env.VITE_APP_TITLE + ' | Systems Architect'
+			}
 		},
 		{
 			path: '/about',
 			name: 'about',
-			component: AboutView
+			component: AboutView,
+			meta: {
+				title: 'About | ' + import.meta.env.VITE_APP_TITLE
+			}
 		},
 		{
 			path: '/contact',
 			name: 'contact',
-			component: ContactView
+			component: ContactView,
+			meta: {
+				title: 'Contact | ' + import.meta.env.VITE_APP_TITLE
+			}
 		}
 	]
 })
