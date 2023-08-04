@@ -15,7 +15,7 @@
 			<li><a href="https://www.linkedin.com/in/jeffkorba" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
 			<li><a href="https://github.com/jeffkorba" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
 			<li><a href="https://codepen.io/jeffkorba" target="_blank"><i class="fa-brands fa-codepen fa-2x"></i></a></li>
-			<li><a href="https://twitter.com/jeffkorba" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+			<li><a href="https://twitter.com/jeffkorba" target="_blank"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li>
 			<li><a href="https://www.instagram.com/jeffkorba" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
 		</ul>
 
@@ -59,9 +59,12 @@
 			a {
 			
 				display: flex;
-				padding: 0.5rem 0.75rem;
+				justify-content: center;
+				align-items: center;
 				background-color: #000;
 				color: #fff;
+				width: 64px;
+				height: 64px;
 				border-radius: 4px;
 				text-decoration: none;
 
