@@ -6,11 +6,11 @@
 
 	<ul>
 		<li>
-			<div class="icon"><i class="fa-solid fa-link"></i></div>
+			<div class="icon"><FontAwesomeIcon :icon="faLink" /></div>
 			<a href="https://korbaconsulting.com" target="_blank">korbaconsulting.com</a>
 		</li>
 		<li>
-			<div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+			<div class="icon"><FontAwesomeIcon :icon="faLinkedin" /></div>
 			<a href="https://www.linkedin.com/in/jeffkorba" target="_blank">linkedin.com/in/jeffkorba</a>
 		</li>
 	</ul>
@@ -18,6 +18,9 @@
 </template>
 
 <script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <style lang="scss" scoped>

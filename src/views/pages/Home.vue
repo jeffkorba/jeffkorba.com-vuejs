@@ -9,11 +9,11 @@
 	<div class="social mb-4">
 
 		<ul>
-			<li><a href="https://www.linkedin.com/in/jeffkorba" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
-			<li><a href="https://github.com/jeffkorba" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
-			<li><a href="https://codepen.io/jeffkorba" target="_blank"><i class="fa-brands fa-codepen fa-2x"></i></a></li>
-			<li><a href="https://twitter.com/jeffkorba" target="_blank"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li>
-			<li><a href="https://www.instagram.com/jeffkorba" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faLinkedin" size="2x" /></a></li>
+			<li><a href="https://github.com/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faGithub" size="2x" /></a></li>
+			<li><a href="https://codepen.io/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faCodepen" size="2x" /></a></li>
+			<li><a href="https://twitter.com/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faTwitter" size="2x" /></a></li>
+			<li><a href="https://www.instagram.com/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faInstagram" size="2x" /></a></li>
 		</ul>
 
 	</div>
@@ -34,6 +34,8 @@
 </template>
 
 <script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faLinkedin, faGithub, faCodepen, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <style lang="scss" scoped>

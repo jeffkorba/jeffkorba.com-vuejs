@@ -1,9 +1,6 @@
-// VENDOR
-@use 'bootstrap/dist/css/bootstrap.min.css';
-
-// CORE
 @use '_variables.scss';
 @use '_fonts.scss';
+@use '_vendor.scss';
 
 body {
 	font-family: 'Poppins', sans-serif;
