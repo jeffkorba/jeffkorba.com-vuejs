@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
 
 	<div class="profile mb-4">
@@ -35,6 +32,9 @@
 	</div>
 
 </template>
+
+<script setup>
+</script>
 
 <style lang="scss" scoped>
 .summary {

@@ -1,6 +1,9 @@
-@import 'bootstrap/scss/bootstrap.scss';
-@import './variables.scss';
-@import './fonts.scss';
+// VENDOR
+@use 'bootstrap/dist/css/bootstrap.min.css';
+
+// CORE
+@use '_variables.scss';
+@use '_fonts.scss';
 
 body {
 	font-family: 'Poppins', sans-serif;

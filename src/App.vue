@@ -1,22 +1,3 @@
-<script>
-import { RouterLink, RouterView } from 'vue-router';
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-
-export default {
-
-	components: {
-		Header, Footer
-	},
-
-	mounted () {
-		let backgroundCount = 6;
-		let randomNumber = Math.ceil(Math.random() * backgroundCount);
-		document.body.classList.add('background', 'background' + randomNumber);
-	}
-}
-</script>
-
 <template>
 
 	<Header />
@@ -56,6 +37,24 @@ export default {
 	<Footer />
 
 </template>
+
+<script setup>
+import { onMounted } from 'vue';
+
+import Header from '@/views/partials/layouts/Header.vue';
+import Footer from '@/views/partials/layouts/Footer.vue';
+
+const background = [
+	'background1', 'background2', 'background3', 'background4', 'background5', 'background6'
+];
+
+const randomNumber = Math.ceil(Math.random() * background.length) - 1;
+
+onMounted(() => {
+
+	document.body.classList.add('background', background[randomNumber]);
+})
+</script>
 
 <style lang="scss">
 body {

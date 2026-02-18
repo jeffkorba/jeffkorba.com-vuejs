@@ -1,42 +1,3 @@
-<script>
-import { useRoute } from 'vue-router';
-
-export default {
-
-	data () {
-
-		return {
-
-			activeTab: 'home',
-			isMenuActive: false
-		}
-	},
-
-	computed: {
-
-		activeTab: () => {
-		
-			const route = useRoute();
-			return route.name;
-		}
-	},
-
-	methods: {
-
-		setTabActive(activeTab) {
-		
-			this.activeTab = activeTab;
-			this.isMenuActive = false;
-		},
-
-		toggleMenu () {
-
-			this.isMenuActive = !this.isMenuActive;
-		}
-	}
-}
-</script>
-
 <template>
 
 	<header>
@@ -60,9 +21,9 @@ export default {
 					<div class="col-6 d-flex align-items-center justify-content-end">
 						<nav>
 							<ul>
-								<li><RouterLink to="/" v-on:click="setTabActive('home')" v-bind:class="{active: activeTab == 'home'}">Home</RouterLink></li>
-								<li><RouterLink to="/about" v-on:click="setTabActive('about')" v-bind:class="{active: activeTab == 'about'}">About</RouterLink></li>
-								<li><RouterLink to="/contact" v-on:click="setTabActive('contact')" v-bind:class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
+								<li><RouterLink to="/" @click="setTabActive('home')" :class="{active: activeTab == 'home'}">Home</RouterLink></li>
+								<li><RouterLink to="/about" @click="setTabActive('about')" :class="{active: activeTab == 'about'}">About</RouterLink></li>
+								<li><RouterLink to="/contact" @click="setTabActive('contact')" :class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
 							</ul>
 						</nav>
 
@@ -82,7 +43,7 @@ export default {
 
 			</div>
 
-			<div class="menu-toggle" v-on:click="toggleMenu">
+			<div class="menu-toggle" @click="toggleMenu()">
 
 				<span v-show="!isMenuActive"><i class="fas fa-bars fa-2x"></i></span>
 
@@ -90,13 +51,13 @@ export default {
 
 			</div>
 
-			<nav v-bind:class="{active: isMenuActive}">
+			<nav :class="{active: isMenuActive}">
 
 				<ul>
 
-					<li><RouterLink to="/" v-on:click="setTabActive('home')" v-bind:class="{active: activeTab == 'home'}">Home</RouterLink></li>
-					<li><RouterLink to="/about" v-on:click="setTabActive('about')" v-bind:class="{active: activeTab == 'about'}">About</RouterLink></li>
-					<li><RouterLink to="/contact" v-on:click="setTabActive('contact')" v-bind:class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
+					<li><RouterLink to="/" @click="setTabActive('home')" :class="{active: activeTab == 'home'}">Home</RouterLink></li>
+					<li><RouterLink to="/about" @click="setTabActive('about')" :class="{active: activeTab == 'about'}">About</RouterLink></li>
+					<li><RouterLink to="/contact" @click="setTabActive('contact')" :class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
 
 				</ul>
 
@@ -107,6 +68,27 @@ export default {
 	</header>
 
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+const Route = useRoute();
+
+const activeTab = ref(Route.name);
+const isMenuActive = ref(false);
+
+function setTabActive(tabName) {
+		
+	activeTab.value = tabName;
+	isMenuActive.value = false;
+}
+
+function toggleMenu () {
+
+	isMenuActive.value = !isMenuActive.value;
+}
+</script>
 
 <style lang="scss" scoped>
 header {

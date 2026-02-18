@@ -1,24 +1,3 @@
-<script>
-export default {
-
-	data() {
-
-		return {
-
-			activeTab: 'summary'
-		}
-	},
-
-	methods: {
-
-		setTabActive(activeTab) {
-		
-			this.activeTab = activeTab;
-		}
-	}
-}
-</script>
-
 <template>
 
 	<h2>About Me</h2>
@@ -27,9 +6,9 @@ export default {
 
 	<nav class="nav nav-pills flex-column flex-sm-row mb-4">
 
-		<a class="flex-sm-fill text-sm-center nav-link" v-on:click="setTabActive('summary')" v-bind:class="{active: activeTab == 'summary'}">Summary</a>
-		<a class="flex-sm-fill text-sm-center nav-link" v-on:click="setTabActive('education')" v-bind:class="{active: activeTab == 'education'}">Education</a>
-		<a class="flex-sm-fill text-sm-center nav-link" v-on:click="setTabActive('technologies')" v-bind:class="{active: activeTab == 'technologies'}">Technologies</a>
+		<a class="flex-sm-fill text-sm-center nav-link" @click="setTabActive('summary')" :class="{active: activeTab == 'summary'}">Summary</a>
+		<a class="flex-sm-fill text-sm-center nav-link" @click="setTabActive('education')" :class="{active: activeTab == 'education'}">Education</a>
+		<a class="flex-sm-fill text-sm-center nav-link" @click="setTabActive('technologies')" :class="{active: activeTab == 'technologies'}">Technologies</a>
 	
 	</nav>
 
@@ -70,6 +49,17 @@ export default {
 	</section>
 
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const activeTab = ref('summary');
+
+function setTabActive(tabName) {
+		
+	activeTab.value = tabName;
+}
+</script>
 
 <style lang="scss" scoped>
 .nav-link {

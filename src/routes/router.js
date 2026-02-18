@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import AboutView from './views/AboutView.vue';
-import ContactView from './views/ContactView.vue';
-import HomeView from './views/HomeView.vue';
+import About from '@/views/pages/About.vue';
+import Contact from '@/views/pages/Contact.vue';
+import Home from '@/views/pages/Home.vue';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +10,7 @@ const router = createRouter({
 		{
 			path: '/',
 			name: 'home',
-			component: HomeView,
+			component: Home,
 			meta: {
 				title: import.meta.env.VITE_APP_TITLE + ' | Systems Architect'
 			}
@@ -18,7 +18,7 @@ const router = createRouter({
 		{
 			path: '/about',
 			name: 'about',
-			component: AboutView,
+			component: About,
 			meta: {
 				title: 'About | ' + import.meta.env.VITE_APP_TITLE
 			}
@@ -26,7 +26,7 @@ const router = createRouter({
 		{
 			path: '/contact',
 			name: 'contact',
-			component: ContactView,
+			component: Contact,
 			meta: {
 				title: 'Contact | ' + import.meta.env.VITE_APP_TITLE
 			}

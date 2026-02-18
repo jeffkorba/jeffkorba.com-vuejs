@@ -1,24 +1,27 @@
-<script>
-export default {
-	data () {
-		return {
-			copyright: '&copy; ' + new Date().getFullYear() + ' Jeff Korba'
-		}
-	}
-}
-</script>
-
 <template>
+
 	<footer>
+
 		<div class="container">
+
 			<div class="row">
+
 				<div class="col-12">
-					<div class="copyright" v-html="copyright"></div>
+
+					<div class="copyright">&copy; {{ new Date().getFullYear() }} Jeff Korba</div>
+
 				</div>
+
 			</div>
+
 		</div>
+
 	</footer>
+
 </template>
+
+<script setup>
+</script>
 
 <style lang="scss" scoped>
 footer {

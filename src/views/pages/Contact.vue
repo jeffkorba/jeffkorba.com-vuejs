@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
 
 	<h2>Let's Connect</h2>
@@ -19,6 +16,9 @@
 	</ul>
 
 </template>
+
+<script setup>
+</script>
 
 <style lang="scss" scoped>
 ul {
