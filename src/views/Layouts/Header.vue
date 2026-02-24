@@ -19,11 +19,12 @@
 					</div>
 
 					<div class="col-6 d-flex align-items-center justify-content-end">
+
 						<nav>
 							<ul>
-								<li><RouterLink to="/" @click="setTabActive('home')" :class="{active: activeTab == 'home'}">Home</RouterLink></li>
-								<li><RouterLink to="/about" @click="setTabActive('about')" :class="{active: activeTab == 'about'}">About</RouterLink></li>
-								<li><RouterLink to="/contact" @click="setTabActive('contact')" :class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
+								<li><RouterLink to="/" :class="{active: props.activeTab == 'home'}">Home</RouterLink></li>
+								<li><RouterLink to="/about" :class="{active: props.activeTab == 'about'}">About</RouterLink></li>
+								<li><RouterLink to="/contact" :class="{active: props.activeTab == 'contact'}">Contact</RouterLink></li>
 							</ul>
 						</nav>
 
@@ -45,9 +46,9 @@
 
 			<div class="menu-toggle" @click="toggleMenu()">
 
-				<span v-show="!isMenuActive"><i class="fas fa-bars fa-2x"></i></span>
+				<span v-show="!isMenuActive"><FontAwesomeIcon :icon="faBars" size="2x" /></span>
 
-				<span v-show="isMenuActive"><i class="fas fa-xmark fa-2x"></i></span>
+				<span v-show="isMenuActive"><FontAwesomeIcon :icon="faXmark" size="2x" /></span>
 
 			</div>
 
@@ -55,9 +56,9 @@
 
 				<ul>
 
-					<li><RouterLink to="/" @click="setTabActive('home')" :class="{active: activeTab == 'home'}">Home</RouterLink></li>
-					<li><RouterLink to="/about" @click="setTabActive('about')" :class="{active: activeTab == 'about'}">About</RouterLink></li>
-					<li><RouterLink to="/contact" @click="setTabActive('contact')" :class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
+					<li><RouterLink to="/" @click="isMenuActive = false" :class="{active: activeTab == 'home'}">Home</RouterLink></li>
+					<li><RouterLink to="/about" @click="isMenuActive = false" :class="{active: activeTab == 'about'}">About</RouterLink></li>
+					<li><RouterLink to="/contact" @click="isMenuActive = false" :class="{active: activeTab == 'contact'}">Contact</RouterLink></li>
 
 				</ul>
 
@@ -70,19 +71,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
-const Route = useRoute();
+const props = defineProps({
+	activeTab: {
+		type: String,
+		required: true
+	}
+});
 
-const activeTab = ref(Route.name);
 const isMenuActive = ref(false);
-
-function setTabActive(tabName) {
-		
-	activeTab.value = tabName;
-	isMenuActive.value = false;
-}
 
 function toggleMenu () {
 

@@ -2,7 +2,7 @@ import '@/sass/main.scss';
 
 import { createApp } from 'vue';
 import App from '@/App.vue';
-import Router from '@/routes/router.js';
+import Router from '@/router.js';
 
 const app = createApp(App);
 

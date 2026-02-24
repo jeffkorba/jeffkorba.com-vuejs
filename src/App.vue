@@ -1,6 +1,6 @@
 <template>
 
-	<Header />
+	<Header :activeTab="Route.name" />
 
 	<main>
 
@@ -40,9 +40,12 @@
 
 <script setup>
 import { onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
-import Header from '@/views/partials/layouts/Header.vue';
-import Footer from '@/views/partials/layouts/Footer.vue';
+import Header from '@/views/Layouts/Header.vue';
+import Footer from '@/views/Layouts/Footer.vue';
+
+const Route = useRoute();
 
 const background = [
 	'background1', 'background2', 'background3', 'background4', 'background5', 'background6'
