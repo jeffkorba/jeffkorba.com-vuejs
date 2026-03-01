@@ -12,7 +12,7 @@
 			<li><a href="https://www.linkedin.com/in/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faLinkedin" size="2x" /></a></li>
 			<li><a href="https://github.com/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faGithub" size="2x" /></a></li>
 			<li><a href="https://codepen.io/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faCodepen" size="2x" /></a></li>
-			<li><a href="https://twitter.com/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faTwitter" size="2x" /></a></li>
+			<li><a href="https://x.com/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faXTwitter" size="2x" /></a></li>
 			<li><a href="https://www.instagram.com/jeffkorba" target="_blank"><FontAwesomeIcon :icon="faInstagram" size="2x" /></a></li>
 		</ul>
 
@@ -35,7 +35,7 @@
 
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faLinkedin, faGithub, faCodepen, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faCodepen, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <style lang="scss" scoped>
