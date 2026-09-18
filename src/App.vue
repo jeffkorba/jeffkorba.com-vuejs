@@ -12,7 +12,7 @@
 
 					<div class="col-12 col-lg-5">
 
-						<img src="/static/images/jeff-korba.jpg" alt="Jeff Korba" class="img-fluid" />
+						<img src="/static/images/jeff-korba.webp" alt="Jeff Korba" class="img-fluid" />
 						
 					</div>
 

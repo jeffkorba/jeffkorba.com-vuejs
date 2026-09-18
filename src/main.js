@@ -6,8 +6,8 @@ import Router from '@/router.js';
 
 const app = createApp(App);
 
-Router.beforeEach((to, from) => {
-	
+Router.beforeEach((to) => {
+
 	document.title = to.meta.title;
 })
 
